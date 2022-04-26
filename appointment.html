@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>ASSIGNMENT </TITLE>
@@ -9,7 +10,157 @@
             <link rel="stylesheet" href="flaticon.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-            <script src='https://kit.fontawesome.com/a076d05399.js'></script></HEAD>
+            <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
+            <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+          
+
+
+
+
+
+
+
+
+      <script>
+          $(document).ready(function(){
+              $("#l1").hide()
+              $("#l2").hide()
+              $("#l3").hide()
+              $("#l4").hide()
+              $("#l5").hide()
+              $("#l6").hide()
+              $("#l7").hide()
+              $("#l8").hide()
+              $("#l9").hide()
+              $("#l10").hide()
+            $("#submit").click(function(){
+
+
+          
+                var firstname= $("#first").val();
+                var lastname= $("#last").val();
+                
+                var email=$('#email').val();
+                var contact=$('#Contact').val()
+                var d1=$('#d1').val();
+                var Dr=$('#Dr').val();
+                var p1=$('#p1').val();
+                var no =/^[7-9]\d{9}$/;
+                var e=/^[a-zA-Z0-9._-]+@[a-zA-z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                var p=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/
+                var a=0
+
+                if( firstname == '' )
+                {
+                   
+                    $("#first").focus();
+                    $("#l1").show()
+                }
+                else $("#l1").hide()
+
+                if( lastname == '' )
+                {
+                   
+                    $("#last").focus();
+                    $("#l2").show();
+                }else $("#l2").hide()
+                
+
+               if(email == '')
+               {
+                  
+                   $("#email").focus();
+                    $("#l3").show();
+               }     
+               else{
+                $("#l3").hide();
+                   if(! (e.test(email))){
+                      
+                       $("#email").focus();
+                        $("#l8").show();
+                        $("#l3").hide();
+                       
+
+                   }
+                   else  $("#l8").hide();
+               }
+
+               if(contact == '')
+               {
+                   
+                   $("#contact").focus();
+                    $("#l4").show();
+               } 
+               else{
+                $("#l4").hide();
+                   if(!(no.test(contact)) ){
+                      
+                       $("#contact").focus();
+                        $("#l9").show();
+                        
+                        $("#l4").hide();
+                  
+                   }
+               }
+
+               if(d1 == '')
+               {
+                   
+                   $("#d1").focus();
+                    $("#l5").show();
+               } else $("#l5").hide();
+
+               if(Dr == '')
+               {
+                   
+                   $("#Dr").focus();
+                    $("#l6").show();
+               }else $("#l6").hide();
+
+               if(p1 == '')
+               {
+                  
+                   $("#Dr").focus();
+                    $("#l7").show();
+               }
+               else{
+                $("#l7").hide();
+                   if(!(p.test(p1))){
+                     
+                       $("#contact").focus();
+                       $("#l10").show();
+                       $("#l7").hide();
+                       
+                   }
+               }
+               
+               
+           
+
+          });
+        });
+
+
+
+
+      </script>
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </HEAD>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><BODY style="font-family: 'Lato', sans-serif;">
 <BODY style="font-family: 'Lato', sans-serif;">
     <nav class="navbar navbar-light navbar-expand-sm  fixed-top" style="background-color:#ededed;"  >
@@ -26,51 +177,86 @@
         <br>
         <br><br>
         <div style="background-color:#ededed;" >
-    <div class="container ml-auto " style="padding: 100px 100px 100px 100px;">
+    <div class="container ml-auto " style="padding: 150px 100px 200px 100px;">
+        
 <div class="card " >
     <h2 class="card-header bg-secondary text-white " > LET'S MEET </h2>
 <div class="card-body" >
     <br>
-<form class="offset-2" > 
-    <div class="form-group row">
-        <lable for="Name" class="col-md-2 col-form-lable "> <h6>Name </h6></lable>
-        <div class="col-md-4 ">
-            <input type="text" class="form-control" id="Name" placeholder="First-name"  >
+<form class="offset-2"   action="#"  > 
+
+
+    <div class="form-group row"  >
+        <lable for="Name" class="col-md-2 col-form-lable "> <h6> First Name </h6></lable>
+        <div class="col-md-6 ">
+            <input type="text" class="form-control" id="first" placeholder="First-name"  >
         </div>
-    <div class="col-md-5 ">
-            <input type="text" class="form-control" id="Name" placeholder="Last-name"  >
-        </div>
+        <lable  id="l1" class="col-md-3 col-form-lable " style="color: red;  position: relative; " >  <h5>Enter Firstname</h5>   </lable>
     </div>
+
+
+    <div class="form-group row">
+        <lable for="Name" class="col-md-2 col-form-lable "> <h6> Last Name </h6></lable>
+    <div class="col-md-6">
+            <input type="text" class="form-control" id="last" placeholder="Last-name"  >
+        </div>
+        <lable  id="l2" class="col-md-3 col-form-lable " style="color: red;  position: relative; " >  <h5>Enter lastname</h5>   </lable>
+
+    </div>
+
+
+
     <div class="form-group row">
         <lable for="E-mail" class="col-md-2 col-form-lable "> <h6> Email-Id </h6></lable>
-        <div class="col-md-9">
-            <input type="email" class="form-control" id="E-mail" placeholder="E-mail"  >
-        </div>   
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="email" placeholder="E-mail"  >
+        </div> 
+        <lable  id="l3" class="col-md-3 col-form-lable " style="color: red;  position: relative; " >  <h5>Enter Email-Id</h5>   </lable>
+        <lable  id="l8" class="col-md-3 col-form-lable " style="color: red;  position: relative; " >  <h5>Invalid Email-Id</h5>   </lable>
+
     </div>
+
+
     <div class="form-group row">
         <lable for="Contact" class="col-md-2 col-form-lable "> <h6> Contact No </h6></lable>
-        <div class="col-md-3">
-            <input type="tel" class="form-control" id="Contact" placeholder="Area-code"  >
+        <div class="col-md-2">
+            <input type="tel" class="form-control" id="area"   >
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <input type="tel" class="form-control" id="Contact" placeholder="Contact No"  >
         </div>
+        <lable  id="l4" class="col-md-3 col-form-lable " style="color: red; position: relative; " >  <h5>Enter Contact no</h5>   </lable>
+        <lable  id="l9" class="col-md-3 col-form-lable " style="color: red; position: relative; " >  <h5>Invalid Contact no</h5>   </lable>
+
     </div>
+
+
+
     <div class="form-group row">
         <lable for="Date" class="col-md-2 col-form-lable "> <h6> Appointment Date  </h6> </lable>
-        <div class="col-md-5">
-            <input type="date" class="form-control" id="E-mail" placeholder="Date"  >
+        <div class="col-md-6">
+            <input type="date" class="form-control" id="d1" placeholder="Date"  >
         </div>
-    </div>  
+        <lable  id="l5" class="col-md-3 col-form-lable " style="color: red;  position: relative;" >  <h5> Enter Appointment Date </h5>   </lable>
+
+    </div>
+    
+    
+
     <div class="form-group row">
         <lable for="Dr" class="col-md-2 col-form-lable "> <h6> Doctor's Name</h6> </lable>
-        <div class="col-md-5">
+        <div class="col-md-6">
             <input type="text" class="form-control" id="Dr" placeholder="Doctor's Name"  >
         </div>
+        <lable  id="l6" class="col-md-3 col-form-lable " style="color: red;  position: relative;" >  <h5>Enter Doctors name</h5>   </lable>
+
     </div> 
+
+
+
     <div class="form-group row">
         <lable for="Dept" class="col-md-2 col-form-lable "><h6>Department </h6></lable>
-        <div class="col-md-5">
+        <div class="col-md-6">
             <select class="custom-select mr-sm-2"  aria-placeholder="Choose Year">
                 <option>Cardiology</option>
                 <option>Neurology</option>
@@ -81,14 +267,32 @@
             </select>
         </div>
     </div> 
+
+
+
     <div class="form-group row">
-      
-        <div class="offset-2">
-            <button type="button" class="btn btn-secondary" >SUBMIT</button>
+        <lable for="Dr" class="col-md-2 col-form-lable "> <h6> Password</h6> </lable>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="p1" placeholder="Password"  >
+        </div>
+        <lable  id="l7" class="col-md-3 col-form-lable " style="color: red;  position: relative;" >  <h5>Enter Password</h5>   </lable>
+        <lable  id="l10" class="col-md-3 col-form-lable " style="color: red;  position: relative;" >  <h5>Password should contain atleast 8 characters with atleast one capital letter , one small letter and atleast one digit </h5>   </lable>
+
+    </div> 
+
+
+
+
+
+    <div class="form-group row">
+        <div class="offset-2 col-md-5 ">
+            <button type="submit" id="submit" class="btn btn-secondary" >SUBMIT</button>
             
             
         </div>
     </div>
+
+
 </form> 
 </div>
 </div>
